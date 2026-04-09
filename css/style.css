@@ -7,6 +7,30 @@
 body{
     width: 100%;
 
+    nav{
+        position: fixed;
+        top: 50%;
+        left: 10px;
+        transform: translateY(-50%);
+
+        a{
+            img{
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                object-fit: cover;
+
+                filter: grayscale(1);
+                border: 2px solid #2a75bb;
+                transition: filter 0.3s ease;
+
+                &:hover{
+                    filter: grayscale(0);
+                }
+            }
+        }
+    }
+
     section{
         height: 100dvh;
 
