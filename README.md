@@ -53,7 +53,6 @@
 | ⚪ **Kalos** | França | Arte, elegância e a mega-evolução. | X / Y |
 | 🟣 **Alola** | Havaí, EUA | Ilhas tropicais e trials sagrados. | Sun / Moon |
 | 🟢 **Galar** | Reino Unido | Estádios, Dynamax e lendas medievais. | Sword / Shield |
-| 🔷 **Paldea**| Espanha/Portugal | Mundo aberto, escolas e três jornadas. | Scarlet / Violet |
 
 ---
 
