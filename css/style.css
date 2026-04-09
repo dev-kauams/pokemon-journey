@@ -166,13 +166,20 @@ body{
         background-size: cover;
         background-repeat: no-repeat;
     }
+    #booking-form{
+        background-image:
+        url('../assets/bg/booking.png');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
 }
 
 .title {
 font-family: 'Press Start 2P', sans-serif;
 font-style: normal;
 font-weight: 400;
-font-size: 96px;
+font-size: 60px;
 text-transform: uppercase;
 color: #FFFFFF; 
 -webkit-text-stroke-width: 4px;
@@ -207,4 +214,82 @@ text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.7);
         height: 50px;
         object-fit: cover;
     }
+}
+
+.title-2 {
+font-family: 'Press Start 2P', sans-serif;
+font-style: normal;
+font-weight: 400;
+font-size: 96px;
+text-transform: uppercase;
+color: #FFFFFF; 
+-webkit-text-stroke-width: 4px;
+-webkit-text-stroke-color: #000000;
+text-shadow: 0px 8px 8px rgba(0, 0, 0, 0.9);
+}
+
+
+.card {
+    border-radius: 15px;
+    background: rgba(0,0,0,0.8);
+    color: white;
+    transition: 0.3s;
+    opacity: 0.9;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    opacity: 1;
+}
+
+
+.card-title-custom {
+    font-family: 'Press Start 2P';
+    font-size: 32px;
+    line-height: 1.4;
+    color: #fff;
+    -webkit-text-stroke: 1px black;
+    text-shadow: 0px 3px 3px rgba(0,0,0,0.7);
+    white-space: nowrap;
+}
+
+.price {
+    font-size: 24px;
+}
+
+.price-old {
+    text-decoration: line-through;
+    opacity: 0.6;
+    margin-bottom: 0;
+    color: red;
+}
+
+.price-new {
+    font-size: 26px;
+    color: #28a745;
+    font-weight: bold;
+}
+
+#card1:hover{
+    border-color: #2a75bb;
+    border-width: 2px;
+    filter: drop-shadow(5px 5px 0px #2a75bb);
+    transition: filter 0.3s ease;
+    transition: all 0.3s ease-in-out;
+}
+
+#card2:hover{
+    border-color: #198754;
+    border-width: 2px;
+    filter: drop-shadow(5px 5px 0px #198754);
+    transition: filter 0.3s ease;
+    transition: all 0.3s ease-in-out;
+}
+
+#card3:hover{
+    border-color: #ffc107;
+    border-width: 2px;
+    filter: drop-shadow(5px 5px 0px #ffc107);
+    transition: filter 0.3s ease;
+    transition: all 0.3s ease-in-out;
 }
