@@ -75,6 +75,96 @@ body{
     section{
         height: 100dvh;
 
+        .container-info{
+
+            .box-pokemon{
+                display: grid;
+                grid-auto-flow: column;
+                & img{
+                    width: auto;
+                    height: 150px;
+                    object-fit: cover;
+                    filter: drop-shadow(-5px -5px 0px #2a75bb);
+                    transition: filter 0.3s ease;
+
+                    &:hover{
+                        filter: drop-shadow(5px 5px 0px #2a75bb);
+                    }
+
+                }
+            }
+        }
+    }
+
+    .box-trainer{
+        & img{
+            width: auto;
+            height: 400px;
+            object-fit: cover;
+            filter: drop-shadow(5px 5px 0px #2a75bb);
+            transition: filter 0.3s ease;
+
+            &:hover{
+                filter: drop-shadow(-5px -5px 0px #2a75bb);
+            }
+        }
+    }
+
+    #kanto {
+        background-image: 
+            url('../assets/bg/kanto.png');
+        background-position: center;    
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    #johto{
+        background-image: 
+            url('../assets/bg/johto.png');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    #hoenn{
+        background-image: 
+            url('../assets/bg/hoenn.png');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    #sinnoh{
+        background-image: 
+            url('../assets/bg/sinnoh.png');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    #unova{
+        background-image: 
+            url('../assets/bg/unova.png');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    #kalos{
+        background-image: 
+            url('../assets/bg/kalos.png');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    #alola{
+        background-image: 
+            url('../assets/bg/alola.png');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    #galar{
+        background-image: 
+            url('../assets/bg/galar.png');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
     }
 }
 
@@ -94,10 +184,27 @@ text-shadow: 0px 8px 8px rgba(0, 0, 0, 0.9);
 font-family: 'Pixelify Sans';
 font-style: normal;
 font-weight: 400;
-font-size: 36px;
+font-size: 25px;
 letter-spacing: 0.05em;
 color: #FFFFFF;
 -webkit-text-stroke-width: 0.4px;
 -webkit-text-stroke-color: #000000;
 text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.7);
+}
+
+
+.section-divisor{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5px;
+    background-color: #2a75bb;
+
+    img{
+        position: absolute;
+        width: auto;
+        height: 50px;
+        object-fit: cover;
+    }
 }
