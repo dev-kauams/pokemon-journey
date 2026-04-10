@@ -370,14 +370,16 @@ text-shadow: 0px 8px 8px rgba(0, 0, 0, 0.9);
     }
 }
 .header {
-    background-color: #2a75bb;
+    background: linear-gradient(to bottom, #2a75bb 50%, #1b4e8583 80%, #00000000);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    max-height: 10dvh;
 }
 
 .header-logo {
     max-width: 400px;
 }
 
-<<<<<<< HEAD
 .no-selected{
     filter: grayscale(1);
     opacity: 0.4;
@@ -388,7 +390,6 @@ text-shadow: 0px 8px 8px rgba(0, 0, 0, 0.9);
     opacity: 1;
     scale: 107%;
 }
-=======
 .footer {
     background-color: #2a75bb;
     color: #fff;
@@ -455,4 +456,3 @@ text-shadow: 0px 8px 8px rgba(0, 0, 0, 0.9);
     transform: translateY(-3px);
     box-shadow: 0px 6px 0px #000;
 }
->>>>>>> 11c378da3b7f3aeb959dc1c9f45d775923407058

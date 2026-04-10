@@ -10,14 +10,14 @@
     <!-- Link para stylesheet customizado -->
     <link rel="stylesheet" href="css/style.css">
     <!-- Linkando imagem para ser o ícone da aba -->
-    <link rel="icon" href="url_da_imagem.png">
+    <link rel="icon" href="assets/logo/pokelogo.svg">
     <title>Pokémon Journey</title>
 </head>
 <body>
-    <header class="header py-4">
-  <div class="container d-flex flex-column align-items-center text-center gap-3">
-    <img src="assets/logo/pokejourney.png" alt="PokéJourney Logo" class="img-fluid header-logo">
-  </div>
+    <header class="header position-absolute py-4 z-3 w-100 d-flex flex-column align-items-center justify-content-center text-center gap-3">
+    <div class="container d-flex flex-column align-items-center text-center gap-3">
+        <img src="assets/logo/pokejourney.png" alt="PokéJourney Logo" class="img-fluid header-logo">
+    </div>
 </header>
     <nav class="d-flex flex-column justify-content-center gap-1 nav-regions">
         <a href="#kanto">
@@ -44,54 +44,54 @@
         <a href="#galar">
             <img src="assets/logo/8galarlogo.svg" alt="Galar Logo" class="logo">
         </a>
+        <a href="#footer">
+            <img src="assets/logo/rotom.svg" alt="Contato Logo" class="logo">
+        </a>
     </nav>
     <section class="section-main" >
-  <div id="carouselPokemon" class="carousel slide" data-bs-ride="carousel">
+    <div id="carouselPokemon" class="carousel slide" data-bs-ride="carousel">
 
-    <div class="carousel-indicators">
-      <button type="button" data-bs-target="#carouselPokemon" data-bs-slide-to="0" class="active"></button>
-      <button type="button" data-bs-target="#carouselPokemon" data-bs-slide-to="1"></button>
-      <button type="button" data-bs-target="#carouselPokemon" data-bs-slide-to="2"></button>
+        <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselPokemon" data-bs-slide-to="0" class="active"></button>
+        <button type="button" data-bs-target="#carouselPokemon" data-bs-slide-to="1"></button>
+        <button type="button" data-bs-target="#carouselPokemon" data-bs-slide-to="2"></button>
+        </div>
+
+        <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="assets/carousel/carousel1.png" class="d-block w-100" alt="Bosques de Kanto">
+            <div class="carousel-caption">
+            <h5>Bosques de Kanto</h5>
+            <p>Caminhe por trilhas tranquilas e descubra Pokémon raros em florestas cheias de vida.</p>
+            </div>
+        </div>
+
+        <div class="carousel-item">
+            <img src="assets/carousel/carousel2.png" class="d-block w-100" alt="Passeios Turísticos">
+            <div class="carousel-caption">
+            <h5>Passeios Turísticos</h5>
+            <p>Navegue por cidades perdidas, pontos turísticos com alto teor histórico, mergulhe na história desses locais.</p>
+            </div>
+        </div>
+
+        <div class="carousel-item">
+            <img src="assets/carousel/carousel3.png" class="d-block w-100" alt="Exploração Radical">
+            <div class="carousel-caption">
+            <h5>Exploração Radical</h5>
+            <p>Se sentindo corajoso? Embarque em aventuras à cavernas submersas com nossos especialistas e descubra tudo que a natureza tenta esconder.</p>
+            </div>
+        </div>
+
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselPokemon" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselPokemon" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+        </button>
     </div>
-
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img src="assets/carousel/carousel1.png" class="d-block w-100" alt="Bosques de Kanto">
-        <div class="carousel-caption">
-          <h5>Bosques de Kanto</h5>
-          <p>Caminhe por trilhas tranquilas e descubra Pokémon raros em florestas cheias de vida.</p>
-        </div>
-      </div>
-
-      <div class="carousel-item">
-        <img src="assets/carousel/carousel2.png" class="d-block w-100" alt="Passeios Turísticos">
-        <div class="carousel-caption">
-          <h5>Passeios Turísticos</h5>
-          <p>Navegue por cidades perdidas, pontos turísticos com alto teor histórico, mergulhe na história desses locais.</p>
-        </div>
-      </div>
-
-      <div class="carousel-item">
-        <img src="assets/carousel/carousel3.png" class="d-block w-100" alt="Exploração Radical">
-        <div class="carousel-caption">
-          <h5>Exploração Radical</h5>
-          <p>Se sentindo corajoso? Embarque em aventuras à cavernas submersas com nossos especialistas e descubra tudo que a natureza tenta esconder.</p>
-        </div>
-      </div>
-
-    </div>
-
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselPokemon" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon"></span>
-    </button>
-
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselPokemon" data-bs-slide="next">
-      <span class="carousel-control-next-icon"></span>
-    </button>
-
-  </div>
-</section>
- <div class="section-divisor">
+    </section>
+    <div class="section-divisor">
         <img src="assets/image.png" alt="">
     </div>
     <section class="section-kanto d-flex flex-column align-items-center pt-5 gap-3" id="kanto">
