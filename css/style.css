@@ -4,39 +4,6 @@
 /* Fonte base de textos */
 @import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&family=Press+Start+2P&display=swap');
 
-
-/* Estilo do figma para fonte de TEXTOS 
-position: absolute;
-font-family: 'Pixelify Sans';
-font-style: normal;
-font-weight: 400;
-font-size: 36px;
-line-height: 43px;
-display: flex;
-align-items: center;
-text-align: center;
-letter-spacing: 0.05em;
-text-transform: uppercase;
-color: #FFFFFF;
-border: 3px solid #000000;
-text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.7);
-/*
-
-/* Estilo para a fonte do figma para TÍTULOS 
-
-font-family: 'Press Start 2P';
-font-style: normal;
-font-weight: 400;
-font-size: 96px;
-line-height: 96px;
-display: flex;
-align-items: center;
-text-align: center;
-color: #FFFFFF; 
-border: 4px solid #000000;
-text-shadow: 0px 8px 8px rgba(0, 0, 0, 0.9);
-*/
-
 *{
     margin: 0;
     padding: 0;
@@ -47,63 +14,21 @@ html{
     scroll-behavior: smooth;
 }
 
-        a img{
-                width: 40px;
-                height: 40px;
-                border-radius: 50%;
-                object-fit: cover;
-                border: 2px solid #2a75bb;
-                transition: filter 0.3s ease, opacity 0.3s ease, scale 0.5s ease;
-        }
-                a img:hover{
-                    filter: grayscale(0);
-                    opacity: 1;
-                }
-        
-        
-
-.box-pokemon {
-    grid-auto-flow: column;
-    grid-template-columns: repeat(3, 1fr);
+body{
+    width: 100%;
+    background-color: #000;
 }
 
-    
-.box-pokemon img {
-    width: auto;
-    height: clamp(80px, 10vw, 150px);
-    object-fit: cover;
-    filter: drop-shadow(-5px -5px 0px #2a75bb);
-                    transition: filter 0.3s ease;
-
-}
-
-.box-pokemon img:hover {
-    filter: drop-shadow(5px 5px 0px #2a75bb);
-}
-
-
-.box-trainer img {
-    object-fit: cover;
-    width: auto;
-    height: clamp(250px, 40vw, 400px);
-    filter: drop-shadow(5px 5px 0px #2a75bb);
-            transition: filter 0.3s ease;
-}
-.box-trainer img:hover{
-filter: drop-shadow(-5px -5px 0px #2a75bb);
-}
-
-section {
-    min-height: 100vh;
-    padding: 60px 20px;
-}
-
+/* --- Navegação Fixa Lateral (Ajustada para Mobile) --- */
 nav {
     position: fixed;
     top: 50%;
     left: 10px;
     transform: translateY(-50%);
     z-index: 10;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 nav a img {
@@ -112,138 +37,147 @@ nav a img {
     border-radius: 50%;
     object-fit: cover;
     border: 2px solid #2a75bb;
-    transition: 0.3s;
+    transition: filter 0.3s ease, opacity 0.3s ease, transform 0.3s ease;
 }
 
+nav a img:hover {
+    filter: grayscale(0);
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+/* --- Seções Principais --- */
 section {
-    min-height: 100vh;
-    padding: 60px 20px;
+    height: 100dvh;
+    min-height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    overflow: hidden;
 }
 
-    #kanto {
-        background-image: 
-            url('../assets/bg/kanto.png');
-        background-position: center;    
-        background-size: cover;
-        background-repeat: no-repeat;
-    }
-    #johto{
-        background-image: 
-            url('../assets/bg/johto.png');
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
-    }
-    #hoenn{
-        background-image: 
-            url('../assets/bg/hoenn.png');
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
-    }
-    #sinnoh{
-        background-image: 
-            url('../assets/bg/sinnoh.png');
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
-    }
-    #unova{
-        background-image: 
-            url('../assets/bg/unova.png');
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
-    }
-    #kalos{
-        background-image: 
-            url('../assets/bg/kalos.png');
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
-    }
-    #alola{
-        background-image: 
-            url('../assets/bg/alola.png');
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
-    }
-    #galar{
-        background-image: 
-            url('../assets/bg/galar.png');
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
-    }
-    #booking-form{
-        background-image:
-        url('../assets/bg/booking.png');
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
-    }
+/* --- Containers e Boxes (Pokémon e Treinador) --- */
+.container-info {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
 
+.box-pokemon {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: clamp(10px, 2vw, 30px);
+    width: 100%;
+}
+
+.box-pokemon img {
+    width: auto;
+    height: clamp(80px, 12vw, 150px); /* Clamp para altura dos pokémon */
+    object-fit: cover;
+    filter: drop-shadow(-5px -5px 0px #2a75bb);
+    transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.box-pokemon img:hover {
+    filter: drop-shadow(5px 5px 0px #2a75bb);
+    transform: scale(1.05);
+}
+
+.box-trainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box-trainer img {
+    width: auto;
+    height: clamp(200px, 35vw, 400px); /* Clamp para altura do treinador */
+    object-fit: cover;
+    filter: drop-shadow(5px 5px 0px #2a75bb);
+    transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.box-trainer img:hover {
+    filter: drop-shadow(-5px -5px 0px #2a75bb);
+    transform: scale(1.02);
+}
+
+/* --- Backgrounds das Regiões --- */
+#kanto { background: url('../assets/bg/kanto.png') center/cover no-repeat; }
+#johto { background: url('../assets/bg/johto.png') center/cover no-repeat; }
+#hoenn { background: url('../assets/bg/hoenn.png') center/cover no-repeat; }
+#sinnoh { background: url('../assets/bg/sinnoh.png') center/cover no-repeat; }
+#unova { background: url('../assets/bg/unova.png') center/cover no-repeat; }
+#kalos { background: url('../assets/bg/kalos.png') center/cover no-repeat; }
+#alola { background: url('../assets/bg/alola.png') center/cover no-repeat; }
+#galar { background: url('../assets/bg/galar.png') center/cover no-repeat; }
+#booking-form { background: url('../assets/bg/booking.png') center/cover no-repeat; }
+
+/* --- Tipografia com Clamp (Ajuste Suave) --- */
 .title {
-font-family: 'Press Start 2P', sans-serif;
-font-style: normal;
-font-weight: 400;
-font-size: clamp(24px, 5vw, 60px);
-text-transform: uppercase;
-color: #FFFFFF; 
--webkit-text-stroke-width: 4px;
--webkit-text-stroke-color: #000000;
-text-shadow: 0px 8px 8px rgba(0, 0, 0, 0.9);
+    font-family: 'Press Start 2P', sans-serif;
+    font-size: clamp(24px, 5vw, 60px);
+    text-transform: uppercase;
+    color: #FFFFFF; 
+    -webkit-text-stroke: clamp(1.5px, 0.3vw, 4px) #000000;
+    text-shadow: 0px 8px 8px rgba(0, 0, 0, 0.9);
+    text-align: center;
 }
 
-.text-content{
-font-family: 'Pixelify Sans';
-font-style: normal;
-font-weight: 400;
-font-size: clamp(14px, 2.5vw, 25px);
-letter-spacing: 0.05em;
-color: #FFFFFF;
--webkit-text-stroke-width: 0.4px;
--webkit-text-stroke-color: #000000;
-text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.7);
+.title-2 {
+    font-family: 'Press Start 2P', sans-serif;
+    font-size: clamp(28px, 8vw, 96px);
+    text-transform: uppercase;
+    color: #FFFFFF; 
+    -webkit-text-stroke: clamp(2px, 0.4vw, 4px) #000000;
+    text-shadow: 0px 8px 8px rgba(0, 0, 0, 0.9);
+    text-align: center;
 }
 
+.text-content {
+    font-family: 'Pixelify Sans';
+    font-size: clamp(16px, 2.5vw, 25px);
+    letter-spacing: 0.05em;
+    color: #FFFFFF;
+    -webkit-text-stroke: 0.4px #000000;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.7);
+    text-align: center;
+    max-width: 800px;
+}
 
-.section-divisor{
+/* --- Divisor de Seção --- */
+.section-divisor {
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 5px;
     background-color: #2a75bb;
-
-    img{
-        position: absolute;
-        width: auto;
-        height: 50px;
-        object-fit: cover;
-    }
+    position: relative;
 }
 
-.title-2 {
-font-family: 'Press Start 2P', sans-serif;
-font-style: normal;
-font-weight: 400;
-font-size: 96px;
-text-transform: uppercase;
-color: #FFFFFF; 
--webkit-text-stroke-width: 4px;
--webkit-text-stroke-color: #000000;
-text-shadow: 0px 8px 8px rgba(0, 0, 0, 0.9);
+.section-divisor img {
+    position: absolute;
+    height: 50px;
+    width: auto;
 }
 
-
+/* --- Cards e Preços --- */
 .card {
     border-radius: 15px;
     background: rgba(0,0,0,0.8);
     color: white;
     transition: 0.3s;
     opacity: 0.9;
+    margin: 10px;
 }
 
 .card:hover {
@@ -251,69 +185,27 @@ text-shadow: 0px 8px 8px rgba(0, 0, 0, 0.9);
     opacity: 1;
 }
 
-
 .card-title-custom {
     font-family: 'Press Start 2P';
-    font-size: 32px;
+    font-size: clamp(18px, 2.5vw, 32px);
     line-height: 1.4;
     color: #fff;
     -webkit-text-stroke: 1px black;
     text-shadow: 0px 3px 3px rgba(0,0,0,0.7);
-    white-space: nowrap;
+    white-space: normal;
 }
 
-.price {
-    font-size: 24px;
-}
+.price { font-size: 24px; }
+.price-old { text-decoration: line-through; opacity: 0.6; color: red; }
+.price-new { font-size: 26px; color: #28a745; font-weight: bold; }
 
-.price-old {
-    text-decoration: line-through;
-    opacity: 0.6;
-    margin-bottom: 0;
-    color: red;
-}
+#card1:hover { border: 2px solid #2a75bb; filter: drop-shadow(5px 5px 0px #2a75bb); }
+#card2:hover { border: 2px solid #198754; filter: drop-shadow(5px 5px 0px #198754); }
+#card3:hover { border: 2px solid #ffc107; filter: drop-shadow(5px 5px 0px #ffc107); }
 
-.price-new {
-    font-size: 26px;
-    color: #28a745;
-    font-weight: bold;
-}
-
-#card1:hover{
-    border-color: #2a75bb;
-    border-width: 2px;
-    filter: drop-shadow(5px 5px 0px #2a75bb);
-    transition: filter 0.3s ease;
-    transition: all 0.3s ease-in-out;
-}
-
-#card2:hover{
-    border-color: #198754;
-    border-width: 2px;
-    filter: drop-shadow(5px 5px 0px #198754);
-    transition: filter 0.3s ease;
-    transition: all 0.3s ease-in-out;
-}
-
-#card3:hover{
-    border-color: #ffc107;
-    border-width: 2px;
-    filter: drop-shadow(5px 5px 0px #ffc107);
-    transition: filter 0.3s ease;
-    transition: all 0.3s ease-in-out;
-}
-
-.carousel,
-.carousel-inner,
-.carousel-item {
-    height: 100%;
-}
-
-.carousel-item img {
-    height: 100%;
-    object-fit: cover;
-}
-
+/* --- Carrossel Bootstrap --- */
+.carousel, .carousel-inner, .carousel-item { height: 100%; }
+.carousel-item img { height: 100%; object-fit: cover; }
 .carousel-item::before {
     content: "";
     position: absolute;
@@ -327,100 +219,45 @@ text-shadow: 0px 8px 8px rgba(0, 0, 0, 0.9);
     text-align: center;
 }
 
-
 .carousel-caption h5 {
     font-family: 'Press Start 2P';
-    font-size: clamp(16px, 4vw, 60px);
+    font-size: clamp(20px, 6vw, 60px);
     color: #fff;    
-
     -webkit-text-stroke: 2px black;
     text-shadow: 0px 6px 6px rgba(0,0,0,0.9);
 }
 
-/* texto */
 .carousel-caption p {
     font-family: 'Pixelify Sans';
-    font-size: clamp(12px, 3vw, 40px);
+    font-size: clamp(14px, 4vw, 40px);
     color: #fff;
-
     -webkit-text-stroke: 0.5px black;
     text-shadow: 0px 4px 4px rgba(0,0,0,0.7);
 }
 
-
-.carousel-indicators button {
-    background-color: #2a75bb;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-}
-
-
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-    filter: drop-shadow(2px 2px 2px black);
-}
-
+/* --- Header e Footer --- */
 .header {
     background: linear-gradient(to bottom, #2a75bb 50%, #1b4e8583 80%, #00000000);
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
+    height: 10dvh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .header-logo {
-    max-width: 250px;
+    max-width: clamp(200px, 40vw, 400px);
 }
 
-.no-selected{
-    filter: grayscale(1);
-    opacity: 0.4;
-}
+.footer { background-color: #2a75bb; color: #fff; padding: 20px 0; }
+.footer-link { font-family: 'Pixelify Sans'; font-size: 18px; color: #fff; text-decoration: none; transition: 0.3s; }
+.footer-link:hover { color: #ffcb05; }
+.footer i { font-size: 24px; cursor: pointer; transition: 0.3s; }
+.footer i:hover { color: #ffcb05; transform: scale(1.2); }
+.footer-contact p, .footer-copy { font-family: 'Pixelify Sans'; font-size: 14px; }
 
-.selected {
-    filter: grayscale(0);
-    opacity: 1;
-    scale: 107%;
-}
-.footer {
-    background-color: #2a75bb;
-    color: #fff;
-}
-
-.footer-link {
-    font-family: 'Pixelify Sans';
-    font-size: 18px;
-    color: #fff;
-    text-decoration: none;
-    transition: 0.3s;
-}
-
-.footer-link:hover {
-    color: #ffcb05;
-}
-
-.footer i {
-    font-size: 24px;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.footer i:hover {
-    color: #ffcb05;
-    transform: scale(1.2);
-}
-
-.footer-contact p {
-    margin: 0;
-    font-family: 'Pixelify Sans';
-    font-size: 16px;
-}
-
-.footer-copy {
-    font-family: 'Pixelify Sans';
-    font-size: 14px;
-    opacity: 0.8;
-}
-
+/* --- Botão Voltar ao Topo --- */
 .back-to-top {
     position: fixed;
     bottom: 30px;
@@ -437,9 +274,7 @@ text-shadow: 0px 8px 8px rgba(0, 0, 0, 0.9);
     font-size: 26px;
     border: 2px solid #000;
     box-shadow: 0px 4px 0px #000;
-    cursor: pointer;
     transition: all 0.3s ease;
-
 }
 
 .back-to-top:hover {
@@ -448,52 +283,53 @@ text-shadow: 0px 8px 8px rgba(0, 0, 0, 0.9);
     box-shadow: 0px 6px 0px #000;
 }
 
+/* --- AJUSTES FINAIS PARA LARGURA DE CELULAR (MOBILE) --- */
 @media (max-width: 768px) {
-    .carousel-caption h5 {
-        font-size: 16px;
+    /* Mover nav lateral para baixo no mobile */
+    nav {
+        top: auto;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        flex-direction: row;
+        background: rgba(0,0,0,0.6);
+        padding: 8px 15px;
+        border-radius: 30px;
+        backdrop-filter: blur(5px);
     }
 
-    .carousel-caption p {
-        font-size: 14px;
+    nav a img {
+        width: 35px;
+        height: 35px;
+    }
+
+    section {
+        height: auto;
+        min-height: 100dvh;
+        padding: 60px 15px;
     }
 
     .carousel-caption {
         bottom: 10%;
     }
 
-    nav {
-        position: fixed;
-        bottom: 0;
-        top: auto;
-        left: 0;
-        transform: none;
-        width: 100%;
-        display: flex !important;
-        flex-direction: row !important;
-        justify-content: center;
-        background: rgba(0,0,0,0.7);
-        padding: 5px;
-        z-index: 1000;
-    }
-
-    nav a img {
-        width: 30px;
-        height: 30px;
-    }
-
-    .header-logo {
-        max-width: 180px;
-    }
-
     .back-to-top {
+        bottom: 80px;
+        right: 15px;
         width: 45px;
         height: 45px;
+        line-height: 45px;
         font-size: 20px;
-        bottom: 80px;
     }
-
-.box-trainer {
-display: grid;
-place-items: center;
 }
+
+
+.no-selected{
+    filter: grayscale(1);
+    opacity: 0.4;
+}
+
+.selected{
+    filter: grayscale(0);
+    opacity: 1;
 }
