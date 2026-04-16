@@ -19,6 +19,9 @@
 
 </div>
 
+<div align="center">
+>**Link do site:**dev-kauams.github.io/pokemon-journey
+
 ---
 
 ## 📖 POKÉDEX DO PROJETO
