@@ -307,6 +307,7 @@ text-shadow: 0px 8px 8px rgba(0, 0, 0, 0.9);
 .carousel-inner,
 .carousel-item {
     height: 100%;
+    width: 100dvh;
 }
 
 .carousel-item img {
